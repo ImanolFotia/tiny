@@ -1,0 +1,7 @@
+*.exe
+*.o
+
+tiny
+tiny.txt
+
+/obj
