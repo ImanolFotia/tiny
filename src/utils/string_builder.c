@@ -1,14 +1,14 @@
 #include "string_builder.h"
 
-bool read_entire_file(const char *path, struct String *output)
+bool read_entire_file(const char *path, String *output)
 {
 
     FILE *input_file = fopen(path, "r");
 
     if (input_file == NULL)
     {
-        printf("Couldn't open file\n");
-        return false;
+        printf("Couldn't open file: %s\n", path);
+        abort();
     }
 
     size_t count = 0;

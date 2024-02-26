@@ -5,12 +5,12 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-struct String
+typedef struct
 {
     char *data;
     size_t size;
-};
+} String;
 
-bool read_entire_file(const char *path, struct String *output);
+bool read_entire_file(const char *path, String *output);
 
 #endif

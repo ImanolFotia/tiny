@@ -1,0 +1,6 @@
+int a = 1+ 1;
+"tiny text"
+
+int function( int i ) {
+    i + i
+}
