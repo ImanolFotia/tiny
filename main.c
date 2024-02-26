@@ -7,8 +7,9 @@ int main(int argc, char *argv[])
 
     if (argc < 2)
     {
-        printf("error: no input files");
-        abort();
+        printf("error: no input files\n");
+        fflush(stdout);
+        exit(255);
     }
     String file_content;
     bool result = read_entire_file(argv[1], &file_content);

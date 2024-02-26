@@ -8,6 +8,7 @@
 typedef enum
 {
     IF = 0,
+    ELSE,
     WHILE,
     FOR,
     INT,
@@ -15,6 +16,9 @@ typedef enum
     CHAR,
     STRING,
     BOOL,
+    SWITCH,
+    CASE,
+    PRINT,
     TOKEN_SIZE,
     STRING_LITERAL,
     NUMBER_LITERAL,
@@ -22,9 +26,9 @@ typedef enum
     UNKNOWN
 } TOKEN_KIND;
 
-static const char *token_string[] = {"string literal", "number literal", "identifier", "unknown"};
+static const char *token_string[] = {"string literal", "number literal", "identifier", "function declaration", "unknown"};
 
-static const char *reserved_words[] = {"if", "while", "do", "for", "int", "float", "char", "string", "bool", "switch", "case"};
+static const char *reserved_words[] = {"if", "else", "while", "do", "for", "int", "float", "char", "string", "bool", "switch", "case", "print"};
 
 #define PLUS '+'
 #define MINUS '-'
